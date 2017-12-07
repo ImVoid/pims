@@ -23,14 +23,14 @@ public class YieldServiceImplTest {
 
     @Test
     public void getMonthlyReturn() {
-        double monthlyReturn = yieldService.getMonthlyReturn(values);
+        double monthlyReturn = yieldService.getMonthlyReturnRate(values);
         String actual = new DecimalFormat("#.00").format(monthlyReturn * 100) + "%";
         assertEquals("2.23%", actual);
     }
 
     @Test
     public void testGetAnnualizedReturn() {
-        double annualizedReturn = yieldService.getAnnualizedReturn(values);
+        double annualizedReturn = yieldService.getAnnualizedReturnRate(values);
         String actual = new DecimalFormat("#.00").format(annualizedReturn * 100) + "%";
         assertEquals("30.24%", actual);
     }

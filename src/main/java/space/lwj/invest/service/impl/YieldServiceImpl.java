@@ -9,13 +9,13 @@ import space.lwj.invest.service.YieldService;
  */
 public class YieldServiceImpl implements YieldService {
     @Override
-    public double getMonthlyReturn(double[] values) {
+    public double getMonthlyReturnRate(double[] values) {
         return Irr.irr(values);
     }
 
     @Override
-    public double getAnnualizedReturn(double[] values) {
-        double monthlyReturn = getMonthlyReturn(values);
+    public double getAnnualizedReturnRate(double[] values) {
+        double monthlyReturn = getMonthlyReturnRate(values);
         return Math.pow(1 + monthlyReturn, 12) - 1;
     }
 }
