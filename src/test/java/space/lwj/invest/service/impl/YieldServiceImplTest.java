@@ -1,16 +1,15 @@
-package space.lwj.service.impl;
+package space.lwj.invest.service.impl;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
-import space.lwj.service.InvestService;
+import space.lwj.invest.service.YieldService;
 
 import java.text.DecimalFormat;
 
 import static org.junit.Assert.*;
 
-public class InvestServiceImplTest {
+public class YieldServiceImplTest {
 
-    private InvestService investService = new InvestServiceImpl();;
+    private YieldService yieldService = new YieldServiceImpl();;
     private double[] values = {
             -10000d,
             -10000d,
@@ -24,14 +23,14 @@ public class InvestServiceImplTest {
 
     @Test
     public void getMonthlyReturn() {
-        double monthlyReturn = investService.getMonthlyReturn(values);
+        double monthlyReturn = yieldService.getMonthlyReturn(values);
         String actual = new DecimalFormat("#.00").format(monthlyReturn * 100) + "%";
         assertEquals("2.23%", actual);
     }
 
     @Test
     public void testGetAnnualizedReturn() {
-        double annualizedReturn = investService.getAnnualizedReturn(values);
+        double annualizedReturn = yieldService.getAnnualizedReturn(values);
         String actual = new DecimalFormat("#.00").format(annualizedReturn * 100) + "%";
         assertEquals("30.24%", actual);
     }

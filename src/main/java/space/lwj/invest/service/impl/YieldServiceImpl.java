@@ -1,13 +1,13 @@
-package space.lwj.service.impl;
+package space.lwj.invest.service.impl;
 
 import org.apache.poi.ss.formula.functions.Irr;
-import space.lwj.service.InvestService;
+import space.lwj.invest.service.YieldService;
 
 /**
  * @author liuweijian
  * @version 2017/12/5.
  */
-public class InvestServiceImpl implements InvestService {
+public class YieldServiceImpl implements YieldService {
     @Override
     public double getMonthlyReturn(double[] values) {
         return Irr.irr(values);

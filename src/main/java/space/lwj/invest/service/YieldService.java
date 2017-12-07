@@ -1,4 +1,4 @@
-package space.lwj.service;
+package space.lwj.invest.service;
 
 /**
  * 投资收益相关服务类
@@ -6,7 +6,7 @@ package space.lwj.service;
  * @author liuweijian
  * @version 2017/12/5.
  */
-public interface InvestService {
+public interface YieldService {
 
     /**
      * 计算月收益率
