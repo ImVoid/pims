@@ -34,4 +34,11 @@ public class YieldServiceImplTest {
         String actual = new DecimalFormat("#.00").format(annualizedReturn * 100) + "%";
         assertEquals("30.24%", actual);
     }
+
+    @Test
+    public void testGetExpectClosingBalance() {
+        double expectClosingBalance = yieldService.getExpectClosingBalance(100, 2, 0.02D);
+        String actual = new DecimalFormat("#.00").format(expectClosingBalance);
+        assertEquals("206.04", actual);
+    }
 }
